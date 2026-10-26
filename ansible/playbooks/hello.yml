@@ -1,0 +1,9 @@
+---
+- name: Hello Ansible on localhost
+  hosts: local
+  gather_facts: false
+
+  tasks:
+    - name: Print a confirmation message
+      ansible.builtin.debug:
+        msg: "Ansible is working on {{ inventory_hostname }}"
