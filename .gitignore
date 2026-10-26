@@ -1,0 +1,35 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.retry
+
+# Ansible local/private files
+ansible/inventories/hosts.ini
+ansible/inventories/hosts.yml
+ansible/inventories/hosts.yaml
+ansible/inventories/private/
+ansible/group_vars/private/
+ansible/host_vars/private/
+ansible/.vault_pass
+ansible/.vault_pass*
+ansible/.ansible/
