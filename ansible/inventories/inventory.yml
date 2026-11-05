@@ -1,18 +1,21 @@
-compute:
-  hosts:
-    inspur2:
-      ansible_host: 10.108.17.56
-    inspur3:
-      ansible_host: 10.108.17.57
-
-local:
-  host:
-    localhosts:
-      ansible_connection: local
-inspur:
+all:
   children:
     compute:
+      hosts:
+        inspur2:
+          ansible_host: 10.108.17.56
+        inspur3:
+          ansible_host: 10.108.17.57
+    
     local:
-vars:
-    ansible_user: cadetcarrington
-    ansible_port: 22
+      hosts:
+        localhosts:
+          ansible_connection: local
+    inspur:
+      children:
+        compute:
+        local:
+  vars:
+      ansible_user: cadetcarrington
+      ansible_port: 22
+    

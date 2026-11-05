@@ -1,0 +1,12 @@
+- name: Try PlayBook
+  hosts: inspur
+  tasks: 
+    - name: Ping
+      ansible.builtin.ping: 
+
+    - name: Print message
+      ansible.builtin.debug: 
+        msg: Hello world
+    - name: Cathostname
+      ansible.builtin.command: 
+        cmd: hostname
